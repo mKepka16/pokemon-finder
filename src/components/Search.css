@@ -1,0 +1,21 @@
+.search-box {
+  display: flex;
+  gap: 5px;
+}
+
+.search-box button {
+  border: 1px solid rgb(175, 175, 175);
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  letter-spacing: .05em;
+  background: rgb(48, 46, 46);
+  color: white;
+  cursor: pointer;
+  transition: all .4s ease;
+  outline: none;
+}
+
+.search-box button:hover {
+  background: rgb(85, 83, 83);
+}

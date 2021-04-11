@@ -1,24 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useSelector } from 'react-redux';
+import Search from './components/Search';
+import Image from './components/Image';
+import Abilities from './components/Abilities';
+import { RootStore } from './store';
 import './App.css';
+import Stats from './components/Stats';
 
-function App() {
+const App: React.FC<any> = (props) => {
+  const { pokemon: { pokemon } } = useSelector((state: RootStore) => state);
+
+  const getSuitableColor = (value: number): string => {
+    const medium = '#e9c46a';
+    const low = '#dc2f02';
+    const high = '#2a9d8f';
+    if(value < 34)
+      return low;
+    if(value > 66)
+      return high;
+    return medium;
+  }
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Search/>
+      { pokemon && (
+        <div className="pokemon-info">
+          <Image/>
+          <Abilities/>
+          <Stats/>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3, h4 {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pokemon-info {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  margin: 40px 5%;
+  align-items: flex-start;
+}
+
+.col {
+  border: 1px solid rgb(175, 175, 175);
+  /* border-radius: 7px; */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+  background: #08162b;
+}
+
+.image img {
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.bottom-text {
+  font-weight: normal;
+  color: white;
+  background: #1a1a1a;
+  text-align: center;
+  padding: 10px 5px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.abilities {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.abilities > div:first-child {
+  padding: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.abilities .name {
+  color:rgb(151, 28, 28);
+  text-transform: uppercase;
+}
+
+.abilities .effect {
+  margin-bottom: 15px;
+}
+
+.stats {
+  padding-top: 10px;
+}
+
+.stat {
+  color: white;
+  margin: 4px 20px;
+  padding: 3px;
+  position: relative;
+  height: 20px;
+}
+
+.stat .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgb(151, 28, 28);
+  z-index: 1;
+}
+
+.stat .text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 2;
 }
