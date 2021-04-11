@@ -98,3 +98,11 @@ p {
   text-align: center;
   z-index: 2;
 }
+
+@media screen and (max-width: 750px) {
+ .pokemon-info {
+   flex-direction: column;
+   align-items: stretch;
+   width: 60vw;
+ } 
+}
