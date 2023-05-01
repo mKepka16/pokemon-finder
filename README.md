@@ -2,6 +2,6 @@
 
 App, which let you get some data about specified pokemons.
 
-## See app on Heroku
+## See app on Netflify
 
-https://pokemon-finder-mkepka.herokuapp.com/
+[click](https://644fbb0491193517320d37d0--comforting-kheer-7161d6.netlify.app/)
